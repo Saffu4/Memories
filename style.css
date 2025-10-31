@@ -1,0 +1,154 @@
+/* ====== Estilos generales ====== */
+:root {
+  --rosa: #d47d7b;
+  --rosa-claro: #f7e8e6;
+  --texto: #444;
+  --fondo: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+  scroll-behavior: smooth;
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--rosa-claro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #b45a58;
+}
+
+/* ====== Hero ====== */
+.hero {
+  background-color: var(--rosa-claro);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--rosa);
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+}
+
+.btn {
+  background-color: var(--rosa);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b45a58;
+}
+
+/* ====== Secciones ====== */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section.light {
+  background-color: var(--rosa-claro);
+}
+
+h2 {
+  color: var(--rosa);
+  margin-bottom: 1.5rem;
+}
+
+/* ====== Tarjetas ====== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== Formulario ====== */
+form {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: var(--rosa);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ====== Animaciones ====== */
+.section, .hero-content, .card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
